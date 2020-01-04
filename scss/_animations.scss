@@ -1,0 +1,28 @@
+@keyframes home-arrow-down {
+  0% {
+    transform: translate3d(0, 0px, 0);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translate3d(0, 5px, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

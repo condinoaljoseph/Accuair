@@ -1,0 +1,369 @@
+@import './reset';
+@import './config';
+@import './globalClasses';
+@import './animations';
+
+body {
+  background-color: $bg-color;
+  color: setColor($bg-color);
+  font-family: $secondary-font;
+  font-weight: 400;
+
+  p {
+    line-height: 28px;
+    color: darken(setColor($bg-color), 40%);
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+}
+
+.welcomeSection {
+  background: linear-gradient(135deg, rgba(9, 47, 75, 1) 0%, rgba(10, 34, 77, 1) 44%, rgba(12, 14, 18, 1) 100%);
+  // background: linear-gradient(135deg, rgba(9, 47, 75, 0.95) 0%, rgba(10, 34, 77, 0.95) 44%, rgba(12, 14, 18, 0.95) 100%), url(../assets/img/welcome-bg.jpg) no-repeat center top/cover;
+  animation: gradientBG 15s ease infinite;
+  
+  // &::before {
+  //   background: url(../assets/img/banner-layer.png) no-repeat bottom;
+  //   position: absolute;
+  //   bottom: 0;
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-size: cover;
+  // }
+}
+
+header.sticky {
+  z-index: 1000;
+  position: fixed;
+  width: 100%; 
+  background: $bg-color;
+  box-shadow: 0 0 3px setColor($bg-color);
+
+  .headerContent {
+    height: 80px;
+
+    .logo {
+      a {
+        color: setColor($bg-color);
+
+        &:before {
+          background: setColor($bg-color);
+        }
+      }
+    }
+
+    nav {
+      ul {
+        li {
+          a {
+            color: setColor($bg-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.headerContent {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 118px;
+  position: relative;
+  transition: 0.4s;
+
+  .logo {
+    a {
+      text-decoration: none;
+      color: $bg-color;
+      font: 700 14px/100% $secondary-font;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: $bg-color;
+        opacity: 0.4;
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 42px;
+        transform: translateY(-50%)
+      }
+
+      img {
+        max-width: 25px;
+        margin-right: 35px;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-flow: row;
+      li {
+        padding: 0 15px;
+        &:last-child {
+          padding-right: 0
+        }
+        a {
+          display: block;
+          padding: 10px 0;
+          border-bottom: 2px solid rgba(255,255,255,0);
+          text-decoration: none;
+          color: $bg-color;
+          text-transform: uppercase;
+          transition: 0.3s;
+          font: 11px/100% $secondary-font;
+
+          &:hover {
+            border-bottom: 2px solid setSecondaryColor($bg-color);
+          }
+        }
+
+        &.active a {
+          border-bottom: 2px solid setSecondaryColor($bg-color);
+        }
+      }
+    }
+  }
+}
+
+.bannerContent {
+  min-height: calc(100vh - 118px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerInfo {
+  margin: -10% 0 0;
+  color: $bg-color;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  h2 {
+    font: 300 35px/100% $secondary-font;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin: 0 -2px 30px 0;
+    opacity: 0.8;
+
+    span {
+      display: block;
+      margin: 20px -15px 0 0;
+      font: 400 60px/100% $primary-font;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+    }
+  }
+
+  a {
+    padding: 15px 20px;
+    text-decoration: none;
+    border: 1px solid $secondary-color;
+    text-transform: uppercase;
+    // font: 500 18px/100% $primary-font;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin-right: -3px;
+    color: $secondary-color;
+    border-radius: 2px;
+    opacity: 0.9;
+  }
+}
+
+.homeArrowDown {
+  text-align: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .fa {
+    color: $bg-color;
+    transform-style: preserve-3d;
+    animation: home-arrow-down 2s linear infinite;
+  }
+}
+
+#about {
+  background: $bg-color;
+  position: relative;
+}
+
+.aboutContent {
+  padding: 100px 0 120px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.aboutInfo {
+  max-width: 653px;
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    font-weight: 300;
+    line-height: 40px;
+    opacity: 0.9;
+
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.aboutImage {
+  align-self: center;
+  border-radius: 50%;
+
+  img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px solid setSecondaryColor($bg-color);
+  }
+}
+
+#services {
+  background-color: setSecondaryBg($bg-color);
+}
+
+.servicesContent {
+  padding: 100px 0 120px;
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    font-weight: 300;
+    line-height: 40px;
+    opacity: 0.9;
+    text-align: center;
+    padding: 0 20%;
+  }
+}
+
+.servicesItem {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  section {
+    padding: 15px;
+    text-align: center;
+
+    h2 {
+      text-transform: uppercase;
+      margin: 30px 0 30px;
+      letter-spacing: 5px;
+      font: 500 18px/100% $primary-font;
+
+      span {
+        display: block;
+        margin: 10px 0 0;
+      }
+    }
+  }
+}
+
+.contactsContent {
+  padding: 100px 0 120px;
+}
+
+.contactsBox {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.contactForm {
+  width: 600px;
+  max-width: 100%;
+
+  form {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+    input[type="text"], input[type="email"] {
+      width: 45%;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      font: 400 14px/100% $primary-font;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      align-self: flex-start;
+      color: setSecondaryBg($bg-color);
+      background: setColor($bg-color);
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .formRow {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  
+  textarea.formControl {
+    height: auto;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  margin-top: 18px;
+  .map {
+    width: 400px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+footer {
+  background-color: setSecondaryBg($bg-color);
+}
+
+.footerContent {
+  padding: 20px 20px;
+  text-align: center;
+  font: 12px/100% $secondary-font;
+
+  a {
+    color: setSecondaryColor($bg-color);
+    text-decoration: none;
+  }
+}
+
+@import './animations'

@@ -1,0 +1,54 @@
+@import './config';
+
+.sectionHeader {
+  font: 500 12px/100% $primary-font;
+  color: setSecondaryColor($bg-color);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: relative;
+  padding-left: 67px;
+  margin-bottom: 35px;
+}
+
+.sectionHeader::before {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  content: '';
+  background: setColor($bg-color);
+  height: 1px;
+  width: 50px;
+}
+
+.sectionLinks {
+  display: inline-block;
+  color: darken(setColor($bg-color), 30%);
+  margin-top: 30px;
+  border-bottom: 2px solid setSecondaryColor($bg-color);
+  padding: 5px 0;
+  text-decoration: none;
+  font-family: $primary-font;
+}
+
+.formControl {
+  display: block;
+  border: 0px;
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+  font: 14px/1.42857143'Open Sans', sans-serif;
+  background-color: $bg-color;
+  box-shadow: none;
+  margin-bottom: 25px;
+  border-bottom: 1px solid setColor($bg-color);
+  color: setColor($bg-color);
+}
+
+// for position fixed problems
+// .jumptarget::before {
+//   display: block; 
+//   content: " "; 
+//   margin-top: -90px; // Set the Appropriate Height
+//   height: 90px; // Set the Appropriate Height
+//   visibility: hidden; 
+// }

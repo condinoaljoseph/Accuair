@@ -1,0 +1,30 @@
+$secondary-color: #00f9ff;
+$bg-color: #fff;
+
+$primary-font: 'Dosis', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+// set color
+@function setColor($color) {
+  @if(lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@function setSecondaryBg($color) {
+  @if(lightness($color) > 40) {
+    @return darken($color, 8%);
+  } @else {
+    @return lighten($color, 8%);
+  }
+}
+
+@function setSecondaryColor($color) {
+  @if(lightness($color) > 40) {
+    @return darken($secondary-color, 13%);
+  } @else {
+    @return $secondary-color;
+  }
+}

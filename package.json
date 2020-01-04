@@ -1,0 +1,17 @@
+{
+  "name": "accuair-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o dist/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "particle.js": "^1.0.7",
+    "particlesjs": "^2.2.3"
+  }
+}
