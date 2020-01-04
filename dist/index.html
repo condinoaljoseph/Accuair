@@ -103,13 +103,13 @@
               </div>
             </div>
             <div class="contactForm">
-              <form action="#">
+              <form name="contact" method="POST" data-netlify="true">
                 <div class="formRow">
-                  <input type="text" placeholder="Name"  class="formControl" />
-                  <input type="email" placeholder="Email"  class="formControl" />
+                  <input type="text" name="name" placeholder="Name" class="formControl" />
+                  <input type="email" name="email" placeholder="Email" class="formControl" />
                 </div>
                 <div class="formRow">
-                  <textarea placeholder="Your Message" class="formControl" rows="4"></textarea>
+                  <textarea placeholder="Your Message" name="message" class="formControl" rows="4"></textarea>
                 </div>
                 <input type="submit" value="Submit Now" name="submit">
               </form>
