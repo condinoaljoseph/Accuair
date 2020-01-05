@@ -1,8 +1,19 @@
 $(document).ready(function() {
-  // for particles
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  PARTICLE JS
+  * ----------------------------------------------------------------------------------------
+  */
+ 
   particlesJS.load('particles-js', 'assets/particles.json', function() {
     console.log('callback - particles-js config loaded');
   });
+
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  STICKY HEADER
+  * ----------------------------------------------------------------------------------------
+  */
 
   // grab the initial top offset of the navigation 
   var stickyNavTop = $('header').offset().top;
@@ -26,6 +37,12 @@ $(document).ready(function() {
   $(window).scroll(function() {
     stickyNav();
   });
+
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  SMOOTH SCROLL
+  * ----------------------------------------------------------------------------------------
+  */
   
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -66,6 +83,12 @@ $(document).ready(function() {
     }
   });
 
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  ON SCROLL SECTION NAVIGATOR
+  * ----------------------------------------------------------------------------------------
+  */
+
   $('nav ul').onePageNav({
     currentClass: 'active',
     changeHash: false,
@@ -74,4 +97,58 @@ $(document).ready(function() {
     filter: '',
     easing: 'swing'
   });
+
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  TINY SLIDER V2
+  * ----------------------------------------------------------------------------------------
+  */
+
+  var slider = tns({
+    "container": '.testimonialsHolder',
+    "items": 1,
+    "mouseDrag": true,
+    "slideBy": "page",
+    "swipeAngle": false,
+    "speed": 400,
+    "controls": false,
+    "navPosition": "bottom",
+    "autoplay": true,
+    "autoplayButtonOutput": false
+  });
+
+  /*
+  * ----------------------------------------------------------------------------------------
+  *  MY SCRIPT ON NAV
+  * ----------------------------------------------------------------------------------------
+  */
+
+  var hamburger = document.querySelector('.hamburger');
+  var nav = document.querySelector('header nav');
+  var close = document.querySelector('nav .close');
+  var backdrop = document.querySelector('.backdrop');
+
+  hamburger.addEventListener('mouseover', function(e) {
+    hamburger.classList.add('hamburgerHover');
+  })
+
+  hamburger.addEventListener('mouseout', function(e) {
+    hamburger.classList.remove('hamburgerHover');
+  })
+
+  hamburger.addEventListener('click', function(e) {
+    nav.style.display = 'block';
+    backdrop.style.display = 'block';
+  })
+
+  close.addEventListener('click', function(e) {
+    nav.style.display = 'none';
+    backdrop.style.display = 'none';
+  })
+
+  backdrop.addEventListener('click', function(e) {
+    nav.style.display = 'none';
+    backdrop.style.display = 'none';
+  })
+
 });

@@ -6,27 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <script src="https://use.fontawesome.com/7d0addcd7b.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.helper.ie8.js"></script><![endif]-->
   <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800|Open+Sans:300,400,600,700&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>Accuair Website</title>
 </head>
 <body>
-  <div id="particles-js"></div>
   <div class="welcomeSection jumptarget" id="home">
+  <div id="particles-js"></div>
     <header>
       <div class="container">
         <div class="headerContent">
           <div class="logo">
             <a href="#"><img src="./assets/img/main-logo.png" alt="Accuair">Accuair</a>
           </div>
+          <div class="backdrop"></div>
           <nav>
+            <span class="close"><i class="fa fa-close fa-2x"></i></span>
             <ul>
               <li class="active"><a href="#home">Home</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Services</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#contacts">Contacts</a></li>
             </ul>
           </nav>
+          <!-- hamburger  -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -54,12 +66,17 @@
         <div class="aboutInfo">
           <h4 class="sectionHeader">About Us</h4>
           <h3>Accuair - Air Conditioning <span>and Refrigeration Services</span></h3>
-          <p>Accuair has started its humble beginnings as a start-up business in May 2019 composed of experienced HVAC SUPERVISOR and AIRCON technicians who have worked for more than 17 years in one of the biggest company in Saudi Arabia (which is one of the hottest areas in the Middle East). Accuair team wants to share their experience in the field ofAir Conditioning and Refrigeration by offering various types of quality services.</p>
           <p>Accuair specializes in providing good quality and guaranteed services, repairs, installation and maintenance of Air Conditioning and Refrigeration systems. Accuair also expands its quality services on home appliances and machine repairs.</p>
           <a href="#" class="sectionLinks">Read More &raquo;</a>
         </div>
         <div class="aboutImage">
-          <img src="assets/img/joel-condino.jpg" alt="Joel Condino" />
+          <figure>
+            <img src="assets/img/joel-condino.jpg" alt="Joel Condino" />
+            <figcaption>
+              <h2>Joel G. Condino</h2>
+              <h3>CEO / Founder</h3>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -68,7 +85,7 @@
   <div id="services" class="jumptarget">
     <div class="container">
       <div class="servicesContent">
-        <h4 class="sectionHeader">What We Offer</h4>
+        <h4 class="sectionHeader hdrCenter">What We Offer</h4>
         <h3>You can always count on us to get to you fast and get the job done right the first time.</h3>
         <div class="servicesItem">
           <section>
@@ -86,8 +103,34 @@
             <h2>System <span>Repair</span></h2>
             <p>Highly trained to offer repair services for any AC & Ref breakdowns that you might face.</p>
           </section>
+          <section>
+            <i class="fa fa-search fa-3x"></i>
+            <h2>View <span>More</span></h2>
+            <p>You can always count on us to get to you fast and get the job done right the first time.</p>
+          </section>
         </div>
-        <a href="#" class="sectionLinks">Read More &raquo;</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="testimonials" class="jumptarget">
+    <div class="container">
+      <div class="testimonialsContent">
+        <h4 class="sectionHeader hdrCenter">Testimonials</h4>
+        <div class="testimonialsHolder">
+          <div class="testimonialItem">
+            <p>AC is working well now and very clean. 👌I highly recommend their service. Thank you KUYA.More customers to come and God Bless. 💕</p>
+            <h2>Lynn Lynn</h2>
+          </div>
+          <div class="testimonialItem">
+            <p>Recommended, high experienced HVAC technicians.</p>
+            <h2>Geremias Nuera</h2>
+          </div>
+          <div class="testimonialItem">
+            <p>Technicians are very honest only the defective part is replaced. They are also very professional and knows their job well. Highly recommended.</p>
+            <h2>Christopher Salcedo</h2>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -97,10 +140,16 @@
       <div class="contactsContent">
         <h4 class="sectionHeader">Say Hello!</h4>
           <div class="contactsBox">
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.081103800525!2d124.32187496817461!3d10.072481869886385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9f715200d24af%3A0xa9efed19cfedb3a0!2sSan%20Vicente%2C%20Bohol!5e0!3m2!1sen!2sph!4v1578221814049!5m2!1sen!2sph"></iframe>
+            </div>
             <div class="contactInfo">
-              <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31426.48620086399!2d124.2900103260593!3d10.073601793508253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9f715200d24af%3A0xa9efed19cfedb3a0!2sSan%20Vicente%2C%20Bohol!5e0!3m2!1sen!2sph!4v1577679212737!5m2!1sen!2sph"></iframe>
-              </div>
+              <ul>
+                <li><i class="fa fa-map fa-3x"></i><address>Zone 5, San Vicente, Trinidad <span>Bohol 6324, Philippines</span></address></li>
+                <li>(+63) 9984926497  <span>(+63) 9668043641</span></li>
+                <li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/accuair.condino/">@accuair.condino</a></li>
+                <li><i class="fa fa-envelope"></i> <a href="mailto:accuaircon.ref@gmail.com ">accuaircon.ref@gmail.com </a></li>
+              </ul>
             </div>
             <div class="contactForm">
               <form name="contact" method="POST" data-netlify="true">
@@ -120,15 +169,37 @@
   </div>
 
   <footer>
-    <div class="container">
-      <div class="footerContent">
-        <p>&copy; Copyright 2020 | Developed by: <a href="https://github.com/condinoaljoseph" target="_blank">Al Joseph Condino</a></p>
+    <!-- <div class="footerTop">
+      <div class="container">
+        <div class="ftrTopContent">
+          <div class="ftrTopInfo">
+            <h3>Get Started</h3>
+            <p>In ACCUAIR, we aim to provide the highest installation and maintenance services, on schedule, and on budget along with outstanding customer service. Whether you need ventilation services, cooling services or even hot water services, ACCUAIR is your ideal partner.</p>
+          </div>
+          <div class="ftrBoxContacts">
+            <h3>Reach Us Thru</h3>
+            <ul>
+              <li><address>Zone 5, San Vicente, Trinidad <span>Bohol 6324, Philippines</span></address></li>
+              <li>(+63) 9984926497  <span>(+63) 9668043641</span></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="mailto:accuaircon.ref@gmail.com ">accuaircon.ref@gmail.com </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="footerBtm">
+      <div class="container">
+        <div class="ftrBtmContent">
+          <p>&copy; Copyright 2020 | Developed by: <a href="https://github.com/condinoaljoseph" target="_blank">Al Joseph Condino</a></p>
+        </div>
       </div>
     </div>
   </footer>
 
   <script src="./js/particles.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script src="./js/nav.js"></script>
   <script src="./js/app.js"></script>
 </body>
