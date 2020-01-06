@@ -31,6 +31,28 @@ and (max-width : 1120px) {
 }
 
 @media only screen
+and (max-width : 1000px) {
+  .contactsBox {
+    flex-wrap: wrap;
+  }
+
+  .contactForm {
+    flex-grow: 1;
+    padding-left: 8%;
+  }
+
+  .map {
+    order: 1;
+    width: 100%;
+    margin-top: 40px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen
 and (max-width : 800px) {
   .sectionHeader {
     text-align: center;
@@ -52,10 +74,11 @@ and (max-width : 800px) {
       right: 0;
       top: 0;
       height: 100%;
-      width: 30%;
+      width: 40%;
       background:#0F1113;
       z-index: 2000;
-      padding: 80px 40px 40px;
+      padding: 80px 4% 40px;
+      box-sizing: border-box;
 
       .close {
         display: block;
@@ -121,7 +144,29 @@ and (max-width : 800px) {
 }
 
 @media only screen
+and (max-width : 700px) {
+  .contactInfo {
+    text-align: center;
+  }
+  
+  .contactsBox {
+    flex-flow: column;
+  }
+
+  .contactForm {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+}
+
+@media only screen
 and (max-width : 600px) {
+  .headerContent {
+    nav {
+      width: 260px;
+    }
+  }
+
   .bannerInfo{
     h2 {
       line-height: 50px;

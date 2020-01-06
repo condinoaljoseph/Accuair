@@ -126,7 +126,7 @@ $(document).ready(function() {
   var hamburger = document.querySelector('.hamburger');
   var nav = document.querySelector('header nav');
   var close = document.querySelector('nav .close');
-  var backdrop = document.querySelector('.backdrop');
+  // var backdrop = document.querySelector('.backdrop');
 
   hamburger.addEventListener('mouseover', function(e) {
     hamburger.classList.add('hamburgerHover');
@@ -138,17 +138,17 @@ $(document).ready(function() {
 
   hamburger.addEventListener('click', function(e) {
     nav.style.display = 'block';
-    backdrop.style.display = 'block';
+    // backdrop.style.display = 'block';
   })
 
   close.addEventListener('click', function(e) {
     nav.style.display = 'none';
-    backdrop.style.display = 'none';
+    // backdrop.style.display = 'none';
   })
 
-  backdrop.addEventListener('click', function(e) {
-    nav.style.display = 'none';
-    backdrop.style.display = 'none';
-  })
+  // backdrop.addEventListener('click', function(e) {
+  //   nav.style.display = 'none';
+  //   backdrop.style.display = 'none';
+  // })
 
 });
