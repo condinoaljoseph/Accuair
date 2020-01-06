@@ -108,7 +108,7 @@ body {
   height: 30px;
   padding: 5px 10px;
   font: 14px/1.42857 "Open Sans", sans-serif;
-  background-color: #fff;
+  background-color: #ebebeb;
   box-shadow: none;
   margin-bottom: 25px;
   border-bottom: 1px solid #000;
@@ -148,6 +148,13 @@ body {
     max-width: 95%; } }
 
 @media only screen and (max-width: 800px) {
+  .sectionHeader {
+    text-align: center;
+    padding: 0; }
+    .sectionHeader::before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 24px; }
   .headerContent {
     height: 80px; }
     .headerContent nav {
@@ -184,4 +191,32 @@ body {
   .bannerInfo h2 {
     font-size: 32px; }
     .bannerInfo h2 span {
-      font-size: 50px; } }
+      font-size: 50px; }
+  .aboutContent {
+    flex-flow: column;
+    text-align: center; }
+  .aboutInfo {
+    max-width: 100%;
+    margin-bottom: 40px; }
+  .servicesItem {
+    flex-flow: row wrap; }
+    .servicesItem section {
+      flex-basis: 45%; } }
+
+@media only screen and (max-width: 600px) {
+  .bannerInfo h2 {
+    line-height: 50px; }
+    .bannerInfo h2 span {
+      font-size: 45px;
+      letter-spacing: 5px;
+      margin: 10px -5px 0 0; }
+  .servicesItem {
+    flex-flow: column; }
+    .servicesItem section {
+      flex-basis: 100%; } }
+
+@media only screen and (max-width: 400px) {
+  .aboutInfo h3 {
+    font-size: 25px; }
+  .aboutImage img {
+    width: 100%; } }

@@ -123,7 +123,7 @@ body {
   height: 30px;
   padding: 5px 10px;
   font: 14px/1.42857143'Open Sans', sans-serif;
-  background-color: $bg-color;
+  background-color: setSecondaryBg($bg-color);
   box-shadow: none;
   margin-bottom: 25px;
   border-bottom: 1px solid setColor($bg-color);

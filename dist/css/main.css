@@ -108,7 +108,7 @@ body {
   height: 30px;
   padding: 5px 10px;
   font: 14px/1.42857 "Open Sans", sans-serif;
-  background-color: #fff;
+  background-color: #ebebeb;
   box-shadow: none;
   margin-bottom: 25px;
   border-bottom: 1px solid #000;
@@ -288,7 +288,8 @@ header.sticky {
 
 #about {
   background: #fff;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
 
 .aboutContent {
   padding: 100px 0;
@@ -311,7 +312,6 @@ header.sticky {
 
 .aboutImage {
   align-self: center;
-  border-radius: 50%;
   text-align: center;
   position: relative; }
   .aboutImage img {
@@ -319,31 +319,32 @@ header.sticky {
     border-radius: 50%; }
   .aboutImage figcaption {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
     color: #fff;
-    background: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 70%);
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    padding: 40px;
     box-sizing: border-box;
-    z-index: -10;
     display: flex;
     flex-flow: column;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    padding: 20px 20px 40px; }
   .aboutImage h2 {
     font-size: 20px;
-    text-transform: uppercase;
     -webkit-transition: .3s;
     transition: .3s;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
     line-height: 20px; }
+  .aboutImage h3 {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase; }
 
 #services {
-  background-color: #ebebeb; }
+  background-color: #ebebeb;
+  position: relative;
+  z-index: 1; }
 
 .servicesContent {
   padding: 100px 0; }
@@ -368,6 +369,10 @@ header.sticky {
       .servicesItem section h2 span {
         display: block;
         margin: 10px 0 0; }
+
+#testimonials {
+  position: relative;
+  background: #fff; }
 
 .testimonialsContent {
   padding: 100px 0; }
@@ -398,6 +403,9 @@ header.sticky {
     border: 0; }
   .tns-nav > .tns-nav-active {
     background: #999; }
+
+#contacts {
+  background-color: #ebebeb; }
 
 .contactsContent {
   padding: 100px 0 120px; }
@@ -449,11 +457,8 @@ header.sticky {
     text-decoration: none;
     color: #000; }
 
-footer {
-  background-color: #050505; }
-
 .footerBtm {
-  background-color: black; }
+  background-color: #003233; }
   .footerBtm .ftrBtmContent {
     padding: 20px 20px;
     text-align: center;
