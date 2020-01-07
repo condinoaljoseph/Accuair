@@ -108,12 +108,13 @@ body {
 
 .sectionLinks {
   display: inline-block;
-  color: darken(setColor($bg-color), 30%);
+  color: $bg-color;
   margin-top: 30px;
-  border-bottom: 2px solid setSecondaryColor($bg-color);
-  padding: 5px 0;
+  background: setSecondaryColor($bg-color);
+  padding: 8px 10px;
   text-decoration: none;
   font-family: $primary-font;
+  border-radius: 2px;
 }
 
 .formControl {

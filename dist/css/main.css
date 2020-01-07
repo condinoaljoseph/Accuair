@@ -94,12 +94,13 @@ body {
 
 .sectionLinks {
   display: inline-block;
-  color: black;
+  color: #fff;
   margin-top: 30px;
-  border-bottom: 2px solid #00b8bd;
-  padding: 5px 0;
+  background: #00b8bd;
+  padding: 8px 10px;
   text-decoration: none;
-  font-family: "Dosis", sans-serif; }
+  font-family: "Dosis", sans-serif;
+  border-radius: 2px; }
 
 .formControl {
   display: block;
@@ -121,27 +122,8 @@ body {
   height: 80px;
   visibility: hidden; }
 
-@keyframes home-arrow-down {
-  0% {
-    transform: translate3d(0, 0px, 0);
-    opacity: 0; }
-  10% {
-    transform: translate3d(0, 5px, 0);
-    opacity: 1; }
-  100% {
-    transform: translate3d(0, 30px, 0);
-    opacity: 0; } }
-
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
 .welcomeSection {
-  background: linear-gradient(135deg, #092f4b 0%, #0a224d 44%, #0c0e12 100%);
+  background: linear-gradient(135deg, #092f4b 0%, rgba(10, 34, 77, 0.99) 44%, rgba(12, 14, 18, 0.95) 100%), url(../assets/img/welcome-bg.jpg) no-repeat center top/cover;
   animation: gradientBG 15s ease infinite;
   position: relative;
   z-index: 10; }
@@ -286,6 +268,16 @@ header.sticky {
   display: flex;
   flex-flow: row;
   justify-content: space-between; }
+  .aboutContent::before {
+    background: url(../assets/img/banner-layer.png) no-repeat bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover; }
 
 .aboutInfo {
   max-width: 653px; }
@@ -351,7 +343,8 @@ header.sticky {
   justify-content: space-between; }
   .servicesItem section {
     padding: 10px;
-    text-align: center; }
+    text-align: center;
+    border-radius: 3px; }
     .servicesItem section h2 {
       text-transform: capitalize;
       margin: 30px 0 30px;
@@ -359,6 +352,14 @@ header.sticky {
       .servicesItem section h2 span {
         display: block;
         margin: 10px 0 0; }
+    .servicesItem section a {
+      color: inherit;
+      text-decoration: none;
+      display: block; }
+    .servicesItem section:last-child:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+      .servicesItem section:last-child:hover .fa {
+        color: #00b8bd; }
 
 #testimonials {
   position: relative;
@@ -414,7 +415,8 @@ header.sticky {
   flex-flow: column;
   justify-content: space-between; }
   .contactForm form input[type="text"], .contactForm form input[type="email"] {
-    width: 44%; }
+    width: 48%;
+    box-sizing: border-box; }
   .contactForm form input[type="submit"] {
     padding: 10px 20px;
     font: 400 14px/100% "Dosis", sans-serif;
@@ -424,7 +426,8 @@ header.sticky {
     color: #ebebeb;
     background: #000;
     border: none;
-    cursor: pointer; }
+    cursor: pointer;
+    box-sizing: border-box; }
 
 .contactForm .formRow {
   display: flex;
@@ -432,7 +435,8 @@ header.sticky {
   justify-content: space-between; }
 
 .contactForm textarea.formControl {
-  height: auto; }
+  height: auto;
+  box-sizing: border-box; }
 
 .contactInfo ul li {
   font-size: 14px;
@@ -445,10 +449,11 @@ header.sticky {
     display: block; }
   .contactInfo ul li a {
     text-decoration: none;
-    color: #000; }
+    color: #000;
+    text-decoration: underline; }
 
 .footerBtm {
-  background-color: #003233; }
+  background-color: #00191a; }
   .footerBtm .ftrBtmContent {
     padding: 20px 20px;
     text-align: center;

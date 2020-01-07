@@ -1,24 +1,12 @@
 @import './config';
 @import './globalClasses';
-@import './animations';
 
 .welcomeSection {
-  background: linear-gradient(135deg, rgba(9, 47, 75, 1) 0%, rgba(10, 34, 77, 1) 44%, rgba(12, 14, 18, 1) 100%);
-  // background: linear-gradient(135deg, rgba(9, 47, 75, 0.95) 0%, rgba(10, 34, 77, 0.95) 44%, rgba(12, 14, 18, 0.95) 100%), url(../assets/img/welcome-bg.jpg) no-repeat center top/cover;
+  // background: linear-gradient(135deg, rgba(9, 47, 75, 1) 0%, rgba(10, 34, 77, 1) 44%, rgba(12, 14, 18, 1) 100%);
+  background: linear-gradient(135deg, rgba(9, 47, 75, 1) 0%, rgba(10, 34, 77, 0.99) 44%, rgba(12, 14, 18, 0.95) 100%), url(../assets/img/welcome-bg.jpg) no-repeat center top/cover;
   animation: gradientBG 15s ease infinite;
   position: relative;
   z-index: 10;
-  
-  // &::before {
-  //   background: url(../assets/img/banner-layer.png) no-repeat bottom;
-  //   position: absolute;
-  //   bottom: 0;
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-size: cover;
-  // }
 }
 
 header.sticky {
@@ -218,6 +206,18 @@ header.sticky {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  
+  &::before {
+    background: url(../assets/img/banner-layer.png) no-repeat bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
 }
 
 .aboutInfo {
@@ -305,6 +305,7 @@ header.sticky {
   section {
     padding: 10px;
     text-align: center;
+    border-radius: 3px;
 
     h2 {
       text-transform: capitalize;
@@ -314,6 +315,22 @@ header.sticky {
       span {
         display: block;
         margin: 10px 0 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    &:last-child {
+      &:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+        .fa {
+          color: setSecondaryColor($bg-color);
+        }
       }
     }
   }
@@ -392,7 +409,8 @@ header.sticky {
     justify-content: space-between;
 
     input[type="text"], input[type="email"] {
-      width: 44%;
+      width: 48%;
+      box-sizing: border-box;
     }
 
     input[type="submit"] {
@@ -405,6 +423,7 @@ header.sticky {
       background: setColor($bg-color);
       border: none;
       cursor: pointer;
+      box-sizing: border-box;
     }
   }
 
@@ -416,6 +435,7 @@ header.sticky {
   
   textarea.formControl {
     height: auto;
+    box-sizing: border-box;
   }
 }
 
@@ -437,7 +457,8 @@ header.sticky {
 
       a {
         text-decoration: none;
-        color: setColor($bg-color)
+        color: setColor($bg-color);
+        text-decoration: underline;
       }
     }
   }
@@ -448,7 +469,7 @@ footer {
 }
 
 .footerBtm {
-  background-color: darken($secondary-color, 40%);
+  background-color: darken($secondary-color, 45%);
 
   .ftrBtmContent {
     padding: 20px 20px;

@@ -1,5 +1,4 @@
 @import './config';
-@import './globalClasses';
 
 @media only screen
 and (min-width : 799px) {
@@ -54,6 +53,10 @@ and (max-width : 1000px) {
 
 @media only screen
 and (max-width : 800px) {
+  .aboutContent, .servicesContent, .testimonialsContent, .contactsContent{
+    padding: 60px 0;
+  }
+
   .sectionHeader {
     text-align: center;
     padding: 0;
@@ -183,6 +186,21 @@ and (max-width : 600px) {
 
     section {
       flex-basis: 100%;
+    }
+  }
+}
+
+@media only screen
+and (max-width : 500px) {
+  .contactForm {
+    form {
+      input[type="text"], input[type="email"], input[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    .formRow {
+      flex-flow: column;
     }
   }
 }

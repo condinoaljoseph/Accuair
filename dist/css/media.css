@@ -1,126 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  background-color: #fff;
-  color: #000;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  font-size: 14px; }
-  body p {
-    line-height: 28px;
-    color: black; }
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto; }
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 0; }
-
-.sectionHeader.hdrCenter {
-  text-align: center;
-  padding: 0; }
-  .sectionHeader.hdrCenter::before {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 24px; }
-
-.sectionHeader {
-  font: 500 12px/100% "Dosis", sans-serif;
-  color: #00b8bd;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  position: relative;
-  padding-left: 67px;
-  margin-bottom: 35px; }
-
-.sectionHeader::before {
-  position: absolute;
-  left: 0;
-  top: 6px;
-  content: '';
-  background: #000;
-  height: 1px;
-  width: 50px; }
-
-.sectionLinks {
-  display: inline-block;
-  color: black;
-  margin-top: 30px;
-  border-bottom: 2px solid #00b8bd;
-  padding: 5px 0;
-  text-decoration: none;
-  font-family: "Dosis", sans-serif; }
-
-.formControl {
-  display: block;
-  border: 0px;
-  width: 100%;
-  height: 30px;
-  padding: 5px 10px;
-  font: 14px/1.42857 "Open Sans", sans-serif;
-  background-color: #ebebeb;
-  box-shadow: none;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #000;
-  color: #000; }
-
-.jumptarget:not(#home)::before {
-  display: block;
-  content: " ";
-  margin-top: -80px;
-  height: 80px;
-  visibility: hidden; }
-
 @media only screen and (min-width: 799px) {
   header.sticky nav ul li a {
     color: #000; } }
@@ -151,6 +28,8 @@ body {
       width: 100%; } }
 
 @media only screen and (max-width: 800px) {
+  .aboutContent, .servicesContent, .testimonialsContent, .contactsContent {
+    padding: 60px 0; }
   .sectionHeader {
     text-align: center;
     padding: 0; }
@@ -229,6 +108,12 @@ body {
     flex-flow: column; }
     .servicesItem section {
       flex-basis: 100%; } }
+
+@media only screen and (max-width: 500px) {
+  .contactForm form input[type="text"], .contactForm form input[type="email"], .contactForm form input[type="submit"] {
+    width: 100%; }
+  .contactForm .formRow {
+    flex-flow: column; } }
 
 @media only screen and (max-width: 400px) {
   .aboutInfo h3 {
