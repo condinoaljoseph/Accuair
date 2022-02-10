@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "particle.js": "^1.0.7",
     "particlesjs": "^2.2.3",
     "tiny-slider": "^2.9.2"
